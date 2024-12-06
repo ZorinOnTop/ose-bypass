@@ -1,0 +1,1 @@
+Niestety, GitHub zezwala pliki tylko do 25MB. Pobierz grę z tego repozytorium: https://github.com/ppy/osu/releases/latest/download/install.exe
