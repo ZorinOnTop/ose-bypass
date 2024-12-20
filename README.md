@@ -3,7 +3,6 @@
   <h1 style="margin: 0;">OSE Bypass</h1>
 </div>
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L4L013Y3TQ)
 
 Hej, jestem [zorin](https://github.com/ZorinOnTop)! <br><br>Wkurza cię internet w szkole czyli od [OSE](https://ose.gov.pl/)? Spoko, nie jesteś sam. Tutaj jest poradnik, oraz jak działa sieć [OSE](https://ose.gov.pl/). To naprawdę nie jest cała filozofia. Zapytasz mnie po co to robię? Z jednego powodu.
 <br>**BLOKOWANIE NIESŁUSZNYCH STRON**. Chcesz sobie zagrać w [osu!](https://osu.ppy.sh/) bo masz trochę luzu i możesz robić co chcesz. Wchodzisz na stronę osu!, ale... Jest zablokowana? Przyszykowałem dla was poradnik z tego powodu.
@@ -56,6 +55,4 @@ Większość szkół posiada [Active Directory](https://pl.wikipedia.org/wiki/Ac
 
 Dziękuje za przeczytanie całego poradnika. Jeżeli nie chce ci się odpalać Hotspot'a, to zostawiam ci programy które są zablokowane.
 
-Chcesz podziękować? Kliknij na gwiazdkę lub wesprzyj mnie! 🧡
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L4L013Y3TQ)
+Chcesz podziękować? Kliknij na gwiazdkę, nic nie kosztuje a motywuje! 🧡
