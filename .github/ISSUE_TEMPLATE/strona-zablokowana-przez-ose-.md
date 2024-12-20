@@ -1,7 +1,7 @@
 ---
 name: Strona zablokowana przez OSE.
 about: Strona jest zablokowana, a nie ma jej na naszej liście? Daj nam znać!
-title: "[STRONA]"
+title: "[STRONA] "
 labels: Dodanie strony do listy
 assignees: ''
 
