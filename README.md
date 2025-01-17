@@ -17,6 +17,13 @@ Hej, jestem [zorin](https://github.com/ZorinOnTop)! <br><br>Wkurza cię internet
 
 [**OSE**](https://ose.gov.pl/) korzysta z własnych DNS Serverów do blokowania stron. Komputer gdy jest podłączony do Internetu, pyta się przez DHCP jaki ma mieć Adres IP itd. Też się pyta o Serwery DNS. Ale jak działa taki serwer DNS? Bardzo prosto. Klient (komputer) wpisuje sobie google.pl. Wtedy Klient pyta się serwera DNS, jaki Adres IP ma google.pl, Wtedy wysyla do klienta Adres IP i tak pokazuje strone. Tutaj jest przykład w wersji obrazkowej.
 
+## ICAP i zaawansowane blokady
+
+OSE stosuje także protokoły takie jak **ICAP** (Internet Content Adaptation Protocol). Dzięki ICAP możliwe jest:
+- Dynamiczne analizowanie treści stron i blokowanie ich na podstawie kategorii (np. "Gry", "Social Media" itp.).
+- Skanowanie pobieranych plików pod kątem wirusów.
+- Modyfikacja ruchu HTTP w czasie rzeczywistym.
+
 <img src="https://wiki.dataspace.pl/wp-content/uploads/2019/12/Adnotacja-2019-12-06-190357.png">
 
 A teraz na przykładzie internetu od [**OSE**](https://ose.gov.pl/). Praktycznie to samo lecz nie do końca. Klient wpisuje google.pl, tak samo pyta się serwera DNS jaki adres ip ma google.pl, lecz sprawdza czy google.pl jest zablokowany. Jak domena jest zablokowana to wysyła Adres IP z komunikatem o zablokowanej stronie. A jak nie ma google.pl w zablokowanych, to wysyła adres ip strony google.pl. Tutaj jest komunikat OSE:
