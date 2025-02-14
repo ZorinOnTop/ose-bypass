@@ -55,6 +55,16 @@ Ale powiesz zorin, co ty gadasz. Wystarczy że się przez panel sterowania wył�
 
 <img src="https://github.com/ZorinOnTop/ose-bypass/blob/main/img/explorer_Iq3XLOAyln.png">
 
+# Nie masz internetu, lub nie chcesz ryzykować?
+Dziękuje [CodingInMyDream](https://github.com/CodingInMyDream) za kolejny bypass <3
+
+Spokojnie, też znajdzie się na to sposób ([i]problem jest taki, że działa na niektórych stronach, jak crazygames.pl[i]).
+Wystarczy wejść na stronę z blokadą OSE, wpisać losowe znaki do strony np. ksdais9sdj (chodzi mi o https://crazygames.pl/ksdais9sdj) i boom. Macie 404? Wystarczy wejść na stronę główną. (Metoda na 404 działa, lecz ze stroną główną niektóre strony).
+
+Link do kolejnego bypassa: https://github.com/ZorinOnTop/ose-bypass/issues/4
+
+# Pare informacji, które mogą być przydatne
+
 Większość szkół posiada [Active Directory](https://pl.wikipedia.org/wiki/Active_Directory), czyli własne użytkowniki. Możesz odpiąć kabel Ethernet i podłączyć się pod swojego hotspota, Tylko kiedy nie ma nauczyciela, tylko nie zapomnij podpiąć znowu kabel ethernet, aby inni uczniowie mogli korzystać z komputera ;)
 
 # Zakończenie
