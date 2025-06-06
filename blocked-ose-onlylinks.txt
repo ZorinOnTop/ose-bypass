@@ -3,6 +3,16 @@ osu.ppy.sh
 
 // GAMES _ ONLINE GAMES
 crazygames.pl
+poki.com
+playhop.com
+silvergames.com
+
+// Games
+coolmathgames.com
+gameforge.com
+armorgames.com
+kongregate.com
+twoplayergames.org
 
 // ENTERTAINMENT_MOVIES AND SERIES
 netflix.com
