@@ -6,6 +6,7 @@ crazygames.pl
 poki.com
 playhop.com
 silvergames.com
+store.steampowered.com
 
 // Games
 coolmathgames.com
