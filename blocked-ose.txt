@@ -4,6 +4,7 @@ crazygames.pl | GAMES _ ONLINE GAMES
 poki.com | GAMES _ ONLINE GAMES
 playhop.com | GAMES _ ONLINE GAMES
 silvergames.com | GAMES _ ONLINE GAMES
+store.steampowered.com | GAMES _ GAMING
 
 coolmathgames.com | Games
 gameforge.com | Games
