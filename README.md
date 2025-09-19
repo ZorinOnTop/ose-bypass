@@ -4,68 +4,46 @@
 </div>
 
 
-Hej, jestem [zorin](https://github.com/ZorinOnTop)! <br><br>Wkurza cię internet w szkole czyli od [OSE](https://ose.gov.pl/)? Spoko, nie jesteś sam. Tutaj jest poradnik, oraz jak działa sieć [OSE](https://ose.gov.pl/). To naprawdę nie jest cała filozofia. Zapytasz mnie po co to robię? Z jednego powodu.
-<br>**BLOKOWANIE NIESŁUSZNYCH STRON**. Chcesz sobie zagrać w [osu!](https://osu.ppy.sh/) bo masz trochę luzu i możesz robić co chcesz. Wchodzisz na stronę osu!, ale... Jest zablokowana? Przyszykowałem dla was poradnik z tego powodu.
+Hej, jestem [zorin](https://github.com/ZorinOnTop)! <br><br>Jeśli denerwuje Cię, że w szkole coś jest zablokowane przez OSE, rozumiem. Ten repo zawiera przegląd tego, jak działa sieć OSE i jakie mechanizmy są wykorzystywane do filtrowania treści. To nie jest instrukcja "jak włamać się do systemu", tylko wyjaśnienie działania oraz uwagi o tym, co naprawdę działa, a co to tylko mito.
 
-<br>Miłego wchodzenia na strony!
+<br>Miłej edukacji i czytania :D
 
-# Jak działa sieć OSE?
+# Co to jest OSE?
 
-[**OSE**](https://ose.gov.pl/) daje dla szkół darmowy internet **100Mb/s** (szkoły mogą dokupić prędkość internetu). Wszystko dofinansowywane z srodków państwa, czyli jest **darmowy**. Ale niestety niektóre strony są zablokowane (jest komunikat OSE lub Polączenie zostało zresetowane.) Na wszystkich komputerach/laptopach szkolnych instaluje się [**OSE Certyfikat**](https://ose.gov.pl/certyfikaty-ose). Lecz nic to nie da, myślicie sobie że usunięcie certyfikatu [OSE](https://ose.gov.pl/) jest niemożliwe bo nie macie hasła Administratora? Faktycznie, nie można usunąć certyfikatu ale czy blokada zostaje jak jest ten certyfikat włączony? Nie.
+**OSE (Ogólnopolska Sieć Edukacyjna)** dostarcza szkołom łącze o przepustowości podstawowej 100 Mb/s. Usługa jest dofinansowana i w podstawowym wariancie jest bezpłatna dla szkół. Możliwe jest też zamówienie wyższej przepustowości za dodatkową opłatą. Prawdopodobnie, OSE korzystają z łączy Vectry (reszta internetu, która jest hostowana np. na OVH) i Orange (dla stron które są hostowane w Orange), po sprawdzeniu w [IPInfo](https://ipinfo.io/AS204679#block-upstreams).
 
-<br>
+> [!NOTE]
+> Darmowy internet OSE jest dostępny głównie dla nauczycieli, a dla uczniów zwykle tylko w pracowni informatycznej (według mojej szkoły). Jeśli w sieci jest wielu nauczycieli online w tym samym czasie, połączenie może chwilowo się przerywać, a przeglądarka wyświetla komunikat "Połączenie zostało zresetowane". To normalne ograniczenie infrastruktury i nie ma związku z blokowaniem stron.
 
-[**OSE**](https://ose.gov.pl/) korzysta z własnych DNS Serverów do blokowania stron. Komputer gdy jest podłączony do Internetu, pyta się przez DHCP jaki ma mieć Adres IP itd. Też się pyta o Serwery DNS. Ale jak działa taki serwer DNS? Bardzo prosto. Klient (komputer) wpisuje sobie google.pl. Wtedy Klient pyta się serwera DNS, jaki Adres IP ma google.pl, Wtedy wysyla do klienta Adres IP i tak pokazuje strone. Tutaj jest przykład w wersji obrazkowej.
+# Jak OSE filtruje ruch?
 
-<img src="https://wiki.dataspace.pl/wp-content/uploads/2019/12/Adnotacja-2019-12-06-190357.png">
+OSE stosuje kilka warstw bezpieczeństwa:
+- **DNS (serwery NASK)** - wszystkie zapytania w sieci szkolnej trafiają do centralnych serwerów NASK. To one decydują, czy domena jest dostępna, czy przekierowywana na komunikat o blokadzie. DNS to tylko jedna z warstw filtrowania.
+- **Centralne proxy / SWG** - ruch WWW (w tym HTTPS) jest często kierowany przez centralne bramy bezpieczeństwa, które analizują adresy URL i zawartość stron.
+- **ICAP / integracja skanów** - system może przesyłać treść do skanów antywirusowych i filtrów kategorii, co pozwala na bardziej zaawansowaną analizę i blokowanie treści w czasie rzeczywistym.
 
-A teraz na przykładzie internetu od [**OSE**](https://ose.gov.pl/). Praktycznie to samo lecz nie do końca. Klient wpisuje google.pl, tak samo pyta się serwera DNS jaki adres ip ma google.pl, lecz sprawdza czy google.pl jest zablokowany. Jak domena jest zablokowana to wysyła Adres IP z komunikatem o zablokowanej stronie. A jak nie ma google.pl w zablokowanych, to wysyła adres ip strony google.pl. Tutaj jest komunikat OSE:
+# Certyfikaty i HTTPS
 
-<img src="https://github.com/ZorinOnTop/ose-bypass/blob/main/img/osezablokowane.png">
-
-OSE prawdopodobnie stosuje także protokoły takie jak **ICAP** (Internet Content Adaptation Protocol). Dzięki ICAP możliwe jest:
-- Dynamiczne analizowanie treści stron i blokowanie ich na podstawie kategorii (np. "Gry", "Social Media" itp.).
-- Skanowanie pobieranych plików pod kątem wirusów.
-- Modyfikacja ruchu HTTP w czasie rzeczywistym.
+Na szkolnych urządzeniach instalowany jest **certyfikat OSE**, aby umożliwić analizę zaszyfrowanego ruchu HTTPS przez systemy bezpieczeństwa.
+> [!NOTE]
+> Usunięcie certyfikatu nie powoduje "ominięcia filtrów". Wręcz przeciwnie — brak certyfikatu może spowodować problemy z poprawnym przeglądaniem stron.
 
 
-# Jak obejść sieć OSE?
-
-Dobra, koniec gadania. Właśnie co potrzebujecie to:
-* Telefon (naładowany może być)
-* Internet (z pakietem)
+Metody "obejścia" — co naprawdę działa?
+- **Zmiana sieci (np. użycie mobilnego hotspotu)** - jeśli korzystasz z innego łącza niż OSE, filtry nie obowiązują, bo jesteś w innej sieci. To nie jest „hak”, tylko normalna zmiana sieci.
+> [!NOTE]
+> Jeżeli korzystasz z laptopa, będzie ci łatwiej odłączyć kabel Ethernet. Sieć OSE jest tylko przez Wi-Fi i Ethernet szkolny. W przypadku komputerów, będzie trudnej jeżeli komputer nie ma Karty sieciowej WI-FI oraz dostęp do kabla Ethernet jest utrudniony. Jeżeli twoja szkoła korzysta z [Active Directory (czyli użytkowników zarządzanych przez serwer jako "Inny użytkownik")](https://pl.wikipedia.org/wiki/Active_Directory), to nie należy odpinać kabla Ethernet, bo wtedy nikt się nie zaloguje na komputerze
+- **Triki typu "404 → wejście na stronę główną"** *[(credit dla mari-fones)](https://github.com/ZorinOnTop/ose-bypass/issues/4)* — to tylko anegdota. W rzadkich przypadkach może zadziałać, ale nie jest niezawodne ani oficjalne.
+- **Zmiany ustawień systemowych / usuwanie certyfikatów** - w większości komputerów szkolnych wymagane są uprawnienia administratora. Próby ingerencji mogą spowodować utratę dostępu do stron.
 
 # Dla użytkowników z Laptopem
 
-1. Odepnij kabel Ethernet.
-2. Włącz hotspot'a
-3. Podłącz się z Hotspot'em.
+1. Możesz użyć mobilnego hotspotu (oczywiście pierw odłączając kabel Ethernet), aby połączyć się z Internetem poza siecią OSE.
+2. W tym przypadku filtry OSE nie obowiązują, bo korzystasz z innego łącza.
+> To najprostsza i legalna metoda obejścia ograniczeń sieci szkolnej.
 
-Tak, to tyle! XD
-
-<img src="https://github.com/ZorinOnTop/ose-bypass/blob/main/img/ApplicationFrameHost_IevwcSiBGr.png">
-
-# Dla użytkowników z Komputerem
-
-Lepiej tego nie rób. A jak jesteś hardcorem to praktycznie to samo robisz co z Laptopem lecz musisz sprawdzić:
-
-1. Czy jest karta sieciowa (powinno być Wi-Fi w komputerze)
-
-Ale powiesz zorin, co ty gadasz. Wystarczy że się przez panel sterowania wyłączy karte ethernet. Oj byczku nie, potrzebujesz hasła Administratora. Nawet na zdjęciu pokaże:
-
-<img src="https://github.com/ZorinOnTop/ose-bypass/blob/main/img/explorer_Iq3XLOAyln.png">
-
-# Nie masz internetu, lub nie chcesz ryzykować?
-Dziękuje [CodingInMyDream](https://github.com/CodingInMyDream) za kolejny bypass <3
-
-Spokojnie, też znajdzie się na to sposób ([i]problem jest taki, że działa na niektórych stronach, jak crazygames.pl[i]).
-Wystarczy wejść na stronę z blokadą OSE, wpisać losowe znaki do strony np. ksdais9sdj (chodzi mi o https://crazygames.pl/ksdais9sdj) i boom. Macie 404? Wystarczy wejść na stronę główną. (Metoda na 404 działa, lecz ze stroną główną niektóre strony).
-
-Link do kolejnego bypassa: https://github.com/ZorinOnTop/ose-bypass/issues/4
-
-# Pare informacji, które mogą być przydatne
-
-Większość szkół posiada [Active Directory](https://pl.wikipedia.org/wiki/Active_Directory), czyli własne użytkowniki. Możesz odpiąć kabel Ethernet i podłączyć się pod swojego hotspota, Tylko kiedy nie ma nauczyciela, tylko nie zapomnij podpiąć znowu kabel ethernet, aby inni uczniowie mogli korzystać z komputera ;)
+# 404 trick (anegdota)
+Niektóre osoby opisują metodę polegającą na wpisaniu losowego podadresu strony (np. jczddskl) i następnie wejściu na stronę główną. To może działać w bardzo specyficznych sytuacjach, ale **nie jest niezawodną ani oficjalną metodą**.
 
 # Zakończenie
 
