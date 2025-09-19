@@ -26,7 +26,7 @@ OSE stosuje kilka warstw bezpieczeństwa:
 
 Na szkolnych urządzeniach instalowany jest **certyfikat OSE**, aby umożliwić analizę zaszyfrowanego ruchu HTTPS przez systemy bezpieczeństwa.
 > [!NOTE]
-> Usunięcie certyfikatu nie powoduje "ominięcia filtrów". Wręcz przeciwnie — brak certyfikatu może spowodować problemy z poprawnym przeglądaniem stron.
+> Usunięcie certyfikatu nie powoduje "ominięcia filtrów". Wręcz przeciwnie - brak certyfikatu może spowodować problemy z poprawnym przeglądaniem stron.
 
 
 Metody "obejścia" — co naprawdę działa?
