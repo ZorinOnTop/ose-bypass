@@ -35,6 +35,7 @@ Metody "obejścia" — co naprawdę działa?
 > Jeżeli korzystasz z laptopa, będzie ci łatwiej odłączyć kabel Ethernet. Sieć OSE jest tylko przez Wi-Fi i Ethernet szkolny. W przypadku komputerów, będzie trudnej jeżeli komputer nie ma Karty sieciowej WI-FI oraz dostęp do kabla Ethernet jest utrudniony. Jeżeli twoja szkoła korzysta z [Active Directory (czyli użytkowników zarządzanych przez serwer jako "Inny użytkownik")](https://pl.wikipedia.org/wiki/Active_Directory), to nie należy odpinać kabla Ethernet, bo wtedy nikt się nie zaloguje na komputerze
 - **Triki typu "404 → wejście na stronę główną"** *[(credit dla mari-fones)](https://github.com/ZorinOnTop/ose-bypass/issues/4)* — to tylko anegdota. W rzadkich przypadkach może zadziałać, ale nie jest niezawodne ani oficjalne.
 - **Zmiany ustawień systemowych / usuwanie certyfikatów** - w większości komputerów szkolnych wymagane są uprawnienia administratora. Próby ingerencji mogą spowodować utratę dostępu do stron.
+- **Sieć Tor** - *[credit dla oreeeee](https://github.com/Oreeeee)* - Zwykłe próby połączenia się do sieci Tor nie zadziałają, ale próba połączenia się do sieci Tor z mostkiem ([przez Telegrama](https://t.me/GetBridgesBot)) już tak.
 
 # Dla użytkowników z Laptopem
 
@@ -44,6 +45,9 @@ Metody "obejścia" — co naprawdę działa?
 
 # 404 trick (anegdota)
 Niektóre osoby opisują metodę polegającą na wpisaniu losowego podadresu strony (np. jczddskl) i następnie wejściu na stronę główną. To może działać w bardzo specyficznych sytuacjach, ale **nie jest niezawodną ani oficjalną metodą**.
+
+# Sieć Tor
+Można z niej skorzystać, ale OSE blokuje wszystkie połączenia do stron Tora (nawet strony lustrzane). Więc aby pobrać Tora, trzeba się zalogować na Telegrama, którego OSE nie blokuje i pobrać Tora od [@gettor_bot](https://t.me/gettor_bot) oraz otrzymać mostki od [@GetBridgesBot](https://t.me/GetBridgesBot).
 
 # Zakończenie
 
