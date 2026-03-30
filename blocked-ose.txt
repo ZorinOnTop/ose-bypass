@@ -1,10 +1,12 @@
 osu.ppy.sh | GAMES_GAMING
 
-crazygames.pl | GAMES _ ONLINE GAMES
-poki.com | GAMES _ ONLINE GAMES
-playhop.com | GAMES _ ONLINE GAMES
-silvergames.com | GAMES _ ONLINE GAMES
-store.steampowered.com | GAMES _ GAMING
+crazygames.pl | GAMES | ONLINE GAMES 
+poki.com | GAMES | ONLINE GAMES 
+playhop.com | GAMES | ONLINE GAMES 
+silvergames.com | GAMES | ONLINE GAMES 
+store.steampowered.com | GAMES | ONLINE GAMES 
+geotastic.net | GAMES | ONLINE GAMES
+
 
 coolmathgames.com | Games
 gameforge.com | Games
@@ -13,8 +15,6 @@ kongregate.com | Games
 twoplayergames.org | Games
 
 steamcommunity.com | Games;Newsgroups/Forums
-
-geotastic.net | GAMES | ONLINE GAMES
 
 netflix.com | ENTERTAINMENT_MOVIES AND SERIES
 
