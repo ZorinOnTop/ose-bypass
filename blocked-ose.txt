@@ -19,3 +19,5 @@ steamcommunity.com | Games;Newsgroups/Forums
 netflix.com | ENTERTAINMENT_MOVIES AND SERIES
 
 ssyoutube.com | DOWNLOADS _ SOFTWARE DOWNLOAD
+
+duck.ai | CHATS | SOCIAL CHAT
