@@ -53,4 +53,4 @@ Można z niej skorzystać, ale OSE blokuje wszystkie połączenia do stron Tora 
 
 Dziękuje za przeczytanie całego poradnika. Jeżeli nie chce ci się odpalać Hotspot'a, to zostawiam ci programy które są zablokowane.
 
-Chcesz podziękować? Kliknij na gwiazdkę, nic nie kosztuje a motywuje! 🧡
+Chcesz podziękować? Kliknij na gwiazdkę, nic nie kosztuje a motywuje!
